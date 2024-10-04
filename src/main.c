@@ -7,10 +7,10 @@ int main() {
     printf("+----------------------------------+\n");
     printf("|    Welcome to the Brain Games!   |\n");
     printf("+----------------------------------+\n");
-    char user_name[25];
+    char user_name[50];
     printf("|    May I have your name?         |\n");
     printf("     Enter your name: ");
-    scanf("%24s", user_name);
+    scanf("%49s", user_name);
     printf("+----------------------------------+\n");
     // printf("Hello, %s!\n\n", user_name);
 
