@@ -26,5 +26,8 @@ copy-clang-format:
 remove-clang-format:
 	rm -f ./.clang-format
 
+cppcheck:
+	cppcheck --enable=all --suppress=checkersReport --inconclusive --std=c99 --suppress=missingIncludeSystem $(SRC)
+
 clean:
 	rm -f brain_games $(OBJ)

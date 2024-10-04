@@ -1,10 +1,11 @@
 #include "common_logic.h"
 
-#include <stdio.h>
+#include <stdio.h> 
 #include <string.h>
 #include <unistd.h>
 
-void play_round(char *question, char *correct_answer, char *user_name) {
+
+void play_round(const char *question, const char *correct_answer, const char *user_name) {
     char user_answer[50];
     usleep(200000);
     printf("| Question: %s\n", question);
