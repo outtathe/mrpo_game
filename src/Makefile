@@ -1,16 +1,30 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror
+SRC = main.c common_logic.c games/lcm_game.c games/progression_game.c utils/utils.c
+OBJ = $(SRC:.c=.o)
+CLANG_FORMAT_CONFIG = ../materials/linters/.clang-format
 
-all: main
+all: brain_games
 
-main: main.c common_logic.c games/gcd_game.c games/progression_game.c utils/utils.c
-	$(CC) $(CFLAGS) -o brain_games main.c common_logic.c games/gcd_game.c games/progression_game.c utils/utils.c
+brain_games: $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $(OBJ)
 
-check-style:
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+check-style: copy-clang-format
 	clang-format -n *.c *.h ./games/*.c ./games/*.h ./utils/*.c ./utils/*.h
+	$(MAKE) remove-clang-format
 
-format:
+format: copy-clang-format
 	clang-format -i *.c *.h ./games/*.c ./games/*.h ./utils/*.c ./utils/*.h
+	$(MAKE) remove-clang-format
+
+copy-clang-format:
+	cp $(CLANG_FORMAT_CONFIG) ./
+
+remove-clang-format:
+	rm -f ./.clang-format
 
 clean:
-	rm -f brain_games
+	rm -f brain_games $(OBJ)
