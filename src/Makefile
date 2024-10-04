@@ -12,7 +12,7 @@ brain_games: $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-check-style: copy-clang-format
+style_check: copy-clang-format
 	clang-format -n *.c *.h ./games/*.c ./games/*.h ./utils/*.c ./utils/*.h ./init/*.c ./init/*.h
 	$(MAKE) remove-clang-format
 

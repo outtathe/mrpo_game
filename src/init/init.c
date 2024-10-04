@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
-#include "../games/games.h"
+
 #include "../common_logic.h"
+#include "../games/games.h"
 
 int init() {
     printf("+----------------------------------+\n");

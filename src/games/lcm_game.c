@@ -7,13 +7,13 @@
 #include "../utils/utils.h"
 
 void lcm_game(char *user_name) {
-    usleep(150000);
+    usleep(200000);
     printf("+----------------------------------------------------+\n");
-    usleep(150000);
+    usleep(200000);
     printf("|         Great! You choose the lcm-game!            |\n");
-    usleep(150000);
+    usleep(200000);
     printf("| Find the smallest common multiple of given numbers.|\n");
-    usleep(150000);
+    usleep(200000);
     while (1) {
         int num1 = get_random_number(1, 15);
         int num2 = get_random_number(1, 15);
@@ -33,6 +33,6 @@ void lcm_game(char *user_name) {
             break;
         }
     }
-    usleep(150000);
+    usleep(200000);
     printf("| Returning to the main menu, %s!\n", user_name);
 }

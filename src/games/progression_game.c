@@ -1,13 +1,20 @@
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 
 #include "../common_logic.h"
 #include "../utils/utils.h"
 
 void progression_game(char *user_name) {
-    printf("What number is missing in the progression?\n");
-    for (int i = 0; i < 3; i++) {
+    usleep(200000);
+    printf("+----------------------------------------------------+\n");
+    usleep(200000);
+    printf("|     Great! You choose the progression game!        |\n");
+    usleep(200000);
+    printf("| What number is missing in the progression?\n");
+    while (1) {
         int length = get_random_number(5, 10);
         int ratio = get_random_number(2, 5);
         int start = get_random_number(1, 10);
@@ -29,6 +36,14 @@ void progression_game(char *user_name) {
         }
 
         play_round(question, correct_answer, user_name);
+        char continue_choice;
+        usleep(200000);
+        printf("| Do you want to continue? (y/n): ");
+        scanf(" %c", &continue_choice);
+        if (tolower(continue_choice) != 'y') {
+            break;
+        }
     }
-    printf("Congratulations, %s!\n", user_name);
+    usleep(200000);
+    printf("| Returning to the main menu, %s!\n", user_name);
 }
