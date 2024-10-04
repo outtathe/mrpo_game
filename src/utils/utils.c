@@ -1,9 +1,8 @@
-#include <stdlib.h>
 #include "utils.h"
 
-int get_random_number(int min, int max) {
-    return rand() % (max - min + 1) + min;
-}
+#include <stdlib.h>
+
+int get_random_number(int min, int max) { return rand() % (max - min + 1) + min; }
 
 int calculate_lcm(int a, int b) {
     int gcd = calculate_gcd(a, b);

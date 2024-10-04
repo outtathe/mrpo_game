@@ -1,7 +1,8 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
 #include "common_logic.h"
+
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
 
 void play_round(char *question, char *correct_answer, char *user_name) {
     char user_answer[50];
@@ -18,6 +19,7 @@ void play_round(char *question, char *correct_answer, char *user_name) {
         usleep(150000);
         printf("| '%s' is wrong answer ;(. Correct answer was '%s'.\n", user_answer, correct_answer);
         usleep(150000);
-        printf("|  Let's try again, %s!\n\n", user_name);
+        printf("|  Wanna try again, %s?\n", user_name);
+        printf("| \n");
     }
 }
