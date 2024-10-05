@@ -101,6 +101,10 @@ mrpo_game/
 - нарушение стандартов
 - уязвимости в безопасности
 - стилевые нормы
+
+## CodeClimate
+[![Maintainability](https://api.codeclimate.com/v1/badges/b4a822e128fabb8c1b79/maintainability)](https://codeclimate.com/github/outtathe/mrpo_game/maintainability)
+
 ## Лицензия
 Этот проект является открытым и свободным для использования.
 
