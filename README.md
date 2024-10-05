@@ -83,7 +83,7 @@ mrpo_game/
 - После каждого раунда вас спросят, хотите ли вы продолжить игру (`y/n`). Введите `y`, чтобы продолжить, или `n`, чтобы вернуться в главное меню.
 
 ## Asciinema с геймплеем
-![asciinema](./materials/images/kitten.jpg)
+[![asciinema](https://asciinema.org/a/xqLPHOVI3g3SEg8C1hpySIjVw.svg)](https://asciinema.org/a/xqLPHOVI3g3SEg8C1hpySIjVw)
 
 ## Работа линтеров
 
