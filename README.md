@@ -105,12 +105,18 @@ mrpo_game/
 ## CodeClimate
 [![Maintainability](https://api.codeclimate.com/v1/badges/b4a822e128fabb8c1b79/maintainability)](https://codeclimate.com/github/outtathe/mrpo_game/maintainability)
 
+К сожалению, CodeClimate не предоставляет возможности вычислять метрику **поддерживаемости кода (maintainability)** для проектов, написанных на языке C.
+![maintainability](./materials/images/supported_languages_4_maintability.png)
+
+Тем не менее, можно воспользоваться некоторыми плагинами, доступными в CodeClimate engine, чтобы улучшить процесс анализа и проверки качества кода. Эти плагины помогут выявить ошибки, улучшить читаемость и поддерживаемость проекта, что позволит поддерживать качество кода на высоком уровне.
+
+# Проверка с помощью **codeclimate engines**
+Результат проверки с кастомным конфигом для CodeClimate:
+![](./materials/images/plugins_b4_maintainability.png)
+
 ## Лицензия
 Этот проект является открытым и свободным для использования.
 
 ---
 
 Наслаждайтесь играми и держите свой ум в тонусе!
-
-
-Измененение ради изменения
